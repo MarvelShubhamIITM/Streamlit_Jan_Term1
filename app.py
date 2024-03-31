@@ -6,3 +6,4 @@ st.title("Little Calculator")
 a = st.number_input()
 b = st.number_input()
 
+st.write(addition(a,b))
