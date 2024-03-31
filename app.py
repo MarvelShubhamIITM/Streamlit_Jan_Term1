@@ -1,10 +1,28 @@
-import streamlit as st
+iimport streamlit as st
 
-def addition(a,b):
-  return(a+b)
-st.title("Little Calculator")
-a = st.number_input("Input your first number : ")
-b = st.number_input("Input your second number : ")
+# Title of the application
+st.title('Simple Calculator')
 
-st.write(addition(a,b))
-st.write(answer)
+# Get user input for two numbers
+num1 = st.number_input('Enter the first number:')
+num2 = st.number_input('Enter the second number:')
+
+# Dropdown menu for selecting operation
+operation = st.selectbox('Select operation:', ['Addition', 'Subtraction', 'Multiplication', 'Division'])
+
+# Perform calculation based on selected operation
+if operation == 'Addition':
+    result = num1 + num2
+    st.write('Result:', result)
+elif operation == 'Subtraction':
+    result = num1 - num2
+    st.write('Result:', result)
+elif operation == 'Multiplication':
+    result = num1 * num2
+    st.write('Result:', result)
+elif operation == 'Division':
+    if num2 == 0:
+        st.write('Error: Cannot divide by zero!')
+    else:
+        result = num1 / num2
+        st.write('Result:', result)
