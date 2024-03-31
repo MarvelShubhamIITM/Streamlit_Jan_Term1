@@ -1,4 +1,4 @@
-iimport streamlit as st
+import streamlit as st
 
 # Title of the application
 st.title('Simple Calculator')
